@@ -1,18 +1,23 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../views/Home.vue';
+import BusDynamic from '../views/BusDynamic.vue';
 import Layout from '@/components/Layout.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
+    component: Home
+  },
+  {
+    path: '/',
+    name: 'BusDynamic',
     component: Layout,
-    redirect: '/home',
     children: [
       {
-        path: 'home',
-        name: 'Home',
-        component: Home
+        path: 'bus',
+        name: 'BusDynamic',
+        component: BusDynamic
       }
     ]
   }
